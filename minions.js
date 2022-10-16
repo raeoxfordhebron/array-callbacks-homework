@@ -48,5 +48,15 @@ const actuallyCapitalizedMinions = capitalizedMinions.filter((minion, index) => 
 
 console.log(actuallyCapitalizedMinions)
 
+// Use every again, but this time on your new actuallyCapitalizedMinions array, to check if they're all capitalized now
 
 
+const isCapitalized = actuallyCapitalizedMinions.every((minion, index) => {
+  let characters = minion.split("")
+  return characters[0] === characters[0].toUpperCase()
+})
+
+console.log(isCapitalized)
+
+
+// Using find, find which minion is not correctly capitalized in the original capitalizedMinionsarray and save it to a variable called uncapitalizedMinion, then console log it
