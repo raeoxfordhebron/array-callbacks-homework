@@ -76,7 +76,11 @@ const indexMinion = capitalizedMinions.findIndex((element, index) => {
 
 console.log(indexMinion)
 
+// Now that he's found him, he can just use capitalizedMinions[1]to select kevin and capitalize his name.
+
 capitalizedMinions[1] = "Kevin"
+
+// Once that's done, check again using everywhether or not capitalizedMinionsis all capitalized correctly
 
 const isCapital = capitalizedMinions.every((element, index) => {
   let characters = element.split("")
@@ -85,3 +89,10 @@ const isCapital = capitalizedMinions.every((element, index) => {
 
 console.log(isCapital)
 
+// First, using map create a separate array called minionNameLengths that maps out the minions' name lengths
+
+const minionNameLengths = capitalizedMinions.map((element, index) => {
+  return element.length
+})
+
+// Use reduceto sum up the minionNameLengthsarray
