@@ -24,8 +24,7 @@ const forEachMinion = (arr) => {
 // Map
 // Using the map method, capitalize each minion's name except Kevin's because he was being sneaky and save it to a new array called capitalizedMinions
 
-const mapEachMinion = (arr) => {
-  let names = arr.map((element, index) => {
+const capitalizedMinions = minions.map((element, index) => {
     if(element !== 'kevin'){
       let splitName = element.split("")
       let capitalizeLetter = splitName[0].toUpperCase()
@@ -35,10 +34,19 @@ const mapEachMinion = (arr) => {
     } else {
       return element
     } 
-  }); console.log(names)
- } 
+  }); console.log(capitalizedMinions)
 
-  mapEachMinion(minions)
+
+
+
+// Use filter to filter out minions that are not capitalized and save the correctly capitalized minions to an array called actuallyCapitalizedMinions
+
+const actuallyCapitalizedMinions = capitalizedMinions.filter((minion, index) => {
+  let characters = minion.split("")
+  return characters[0] === characters[0].toUpperCase()
+})
+
+console.log(actuallyCapitalizedMinions)
 
 
 
