@@ -67,3 +67,12 @@ const uncapitalizedMinion = capitalizedMinions.find((element, index) => {
 })
 
 console.log(uncapitalizedMinion)
+
+// Using findIndex, find what index kevin is in the original capitalizedMinionsarray
+
+const indexMinion = capitalizedMinions.findIndex((element, index) => {
+  return element === 'kevin'
+})
+
+console.log(indexMinion)
+
