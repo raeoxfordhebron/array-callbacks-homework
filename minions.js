@@ -19,7 +19,7 @@ const forEachMinion = (arr) => {
   })
 }
 
-forEachMinion(minions)
+// forEachMinion(minions)
 
 // Map
 // Using the map method, capitalize each minion's name except Kevin's because he was being sneaky and save it to a new array called capitalizedMinions
@@ -31,9 +31,14 @@ const mapEachMinion = (arr) => {
       let capitalizeLetter = splitName[0].toUpperCase()
       splitName.splice(0, 1, capitalizeLetter)
       let joinNames = splitName.join("")
+      return joinNames
     } else {
       return element
     } 
-  }) 
-  } 
+  }); console.log(names)
+ } 
+
+  mapEachMinion(minions)
+
+
 
