@@ -100,3 +100,17 @@ const minionNameLengths = capitalizedMinions.map((element, index) => {
 const reduceMinions = minionNameLengths.reduce((acc, element) => acc + element, 0)
 
 console.log(reduceMinions)
+
+// Now Gru wants to test out the somemethod, so let's go ahead and do that a few times.
+// Check whether or not some of the minion's name lengths are 6 or above. How about 7 or above?
+
+const someMinions = minionNameLengths.some((element, index) => {
+  return element.length >= 7;
+})
+
+console.log(someMinions)
+
+// Lowercase Kevin's name again inside of the capitalizedMinions array, then check whether or not some of the minion's names are capitalized using some. How about it any are lowercased?
+
+capitalizedMinions[1] = "kevin"
+
