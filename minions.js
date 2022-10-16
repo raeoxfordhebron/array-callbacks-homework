@@ -76,3 +76,12 @@ const indexMinion = capitalizedMinions.findIndex((element, index) => {
 
 console.log(indexMinion)
 
+capitalizedMinions[1] = "Kevin"
+
+const isCapital = capitalizedMinions.every((element, index) => {
+  let characters = element.split("")
+  return characters[0] === characters[0].toUpperCase()
+})
+
+console.log(isCapital)
+
