@@ -95,4 +95,8 @@ const minionNameLengths = capitalizedMinions.map((element, index) => {
   return element.length
 })
 
-// Use reduceto sum up the minionNameLengthsarray
+// Use reduce to sum up the minionNameLengths array
+
+const reduceMinions = minionNameLengths.reduce((acc, element) => acc + element, 0)
+
+console.log(reduceMinions)
