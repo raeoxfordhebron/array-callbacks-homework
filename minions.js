@@ -114,3 +114,30 @@ console.log(someMinions)
 
 capitalizedMinions[1] = "kevin"
 
+const upperCase = capitalizedMinions.some((element, index) => {
+  const splitElement = element.split("")
+  return splitElement[0] === splitElement[0].toUpperCase()
+})
+
+const lowerCase = capitalizedMinions.some((element, index) => {
+  const splitElement = element.split("")
+  return splitElement[0] === splitElement[0].toLowerCase()
+})
+
+// Use sort to order the minions within the capitalizedMinions array by order of name length.
+// Hints: you'll need to write your own compareMinions function first to pass in as a callback to sort
+
+capitalizedMinions.sort(function compareMinions(minion1, minion2){
+  if(minion1.length < minion2.length) {
+    return -1
+  }
+  if(minion1.length > minion2.length){
+    return 1
+  }
+  if(minion1.length = minion2.length){
+    return 0
+  }
+})
+
+
+
